@@ -28,7 +28,7 @@ jobs:
         name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
-          registry: chcr.io
+          registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CHRC_TOKEN }}
       -
@@ -40,4 +40,4 @@ jobs:
           push: true
           tags: |
             mateorar/animal-farm-nodejs:latest
-            chcr.io/mateorar/animal-farm-nodejs:latest
+            ghcr.io/mateorar/animal-farm-nodejs:latest
